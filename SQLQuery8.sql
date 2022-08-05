@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[photos]
+(
+ [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ [Path] VARCHAR(50) NOT NULL,
+ [Name] VARCHAR(50) NOT NULL,
+ [UserId] NVARCHAR (MAX) NOT NULL,
+ [Date]   DATETIME       NOT NULL
+);
