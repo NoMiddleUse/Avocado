@@ -1,80 +1,83 @@
 ﻿@model IEnumerable<WebApplication1.Models.Food_Database>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Food Bank";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="jumbotron" style="background-image:url(/images/1442.jpg); background-size:contain" >
+    <h1 style="color:white; font-family:'MV Boli'">Food Bank</h1>
 
-<h2>Index</h2>
+    <div class="well well-lg" style="background-color:floralwhite; opacity: 0.80; width: 90%; font-family: 'MV Boli'">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Energy)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Protein)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Carbohydrate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fat)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fiber)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Energy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Protein)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Carbohydrate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fiber)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Energy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Protein)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Carbohydrate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fat)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fiber)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @section Scripts {
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Energy)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Protein)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Carbohydrate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Fat)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Fiber)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-@section Scripts {
-
-    @Scripts.Render("~/Scripts/DataTables/jquery.dataTables.js")
-    @Scripts.Render("~/Scripts/DataTables/dataTables.bootstrap.js")
-    <script>
-            $(document).ready(function () {
-                        $('.table').DataTable();
+            @Scripts.Render("~/Scripts/DataTables/jquery.dataTables.js")
+            @Scripts.Render("~/Scripts/DataTables/dataTables.bootstrap.js")
+            <script>
+                $(document).ready(function () {
+                    $('.table').DataTable();
                 });
-    </script>
-}
-<link href="~/Content/DataTables/css/dataTables.bootstrap.min.css"
-      rel="stylesheet" />
+            </script>
+        }
+        <link href="~/Content/DataTables/css/dataTables.bootstrap.min.css"
+              rel="stylesheet" />
+    </div>
+</div>

@@ -1,19 +1,39 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    width:100%;
+}
+h1 {
+    color: white;
+    font-family: Calibri;
 }
 
+.about_title{
+   align-content:center;
+   font-weight:600;
+   color:darkolivegreen;
+   font-family:'MV Boli';
+   text-align:center;
+}
+
+.normal_text {
+    color:white;
+    font-family: 'MV Boli';
+    font-size:15px;
+}
+.recipe_title {
+    color: dimgrey;
+    font-family: 'MV Boli';
+    font-size:18px;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-top:60px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
+    white-space:normal;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -23,8 +43,20 @@ textarea {
     max-width: 280px;
 }
 
+.navbar-header{
+    font-family:'Ink Free';
+    font-weight:600
+}
+.navbar-collapse collapse{
+    font-family:'MV Boli';
+}
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-    background-color: #777;
-    border-color: #fff
+    background-color: mintcream;
+    font-family: fantasy;
+    border-color: mintcream;
+}
+
+.well well-lg{
+   margin-right:20px;
 }

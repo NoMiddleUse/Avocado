@@ -1,7 +1,142 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="well" style="background-image:url(/images/Feb02.jpg); background-size:contain">
+    <h3 class="about_title">OUR COMPANY</h3>
+    <div class="well well-lg" style="background-color:tan">
+        <p class="normal_text" >
+            Just as the website’s name “AVOCADO”, a recognized healthy food, shows, our website provides a comprehensive
+            but nutrition-based health service to our user. The user of our website don’t have to sign up and login in if they only need
+            to get the nutrition components of a food. They are free to search the food in our food database, which has been established
+            by the admin and is being updated by all users. When they have requirement of recording lengthy period health data of their
+            body and monitoring the change of their body shape by photos, there is a convenient and reliable access for them to load their
+            personal information after signing up and login.
+        </p>
+    </div>
+    <h3 class="about_title">OUR VALUES</h3>
+    <div class="well well-lg" style="background-color:tan">
+        <p class="normal_text">    A healthy diet is essential for good health and nutrition.</p>
+        <p class="normal_text">    It protects you against many chronic noncommunicable diseases, such as heart disease, diabetes and 
+        cancer. Eating a variety of foods and consuming less salt, sugars and saturated and industrially-produced trans-fats, 
+        are essential for healthy diet.
+        </p>
+    </div>
+    <h3 class="about_title">OUR SERVICES</h3>
+    <div class="well well-lg" style="background-color:tan">
+        <div class="row">
+           <div class="col-lg-6">
+                <P class="normal_text"><span class="glyphicon glyphicon-piggy-bank"></span> Food Database</P>
+                <P class ="normal_text"><span class="glyphicon glyphicon-book"></span> Recipe</P>
+</div>
+           <div class="col-lg-6">
+               <p class="normal_text"><span class="glyphicon glyphicon-calendar"></span> Body Data Record</p>
+               <p class="normal_text"><span class="glyphicon glyphicon-camera"></span> Photo Upload</p>
+           </div>
+    </div>
+    </div>
+    <h3 class="about_title">OUR TEAM</h3>
+    <div class="well well-lg" style="background-color:tan">
+        <div class="row" style="color:whitesmoke; font-family:'MV Boli'">
+            <!-- Media top -->
+            <div class="col-sm-6">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="~/images/img_avartar1.jpg" class="media-object" style="width:60px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media Top</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
 
-<p>Use this area to provide additional information.</p>
+                <!-- Media middle -->
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <img src="~/images/img_avartar2.jpg" class="media-object" style="width:60px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media Middle</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+
+                <!-- Media bottom -->
+                <div class="media">
+                    <div class="media-left media-bottom">
+                        <img src="~/images/img_avartar3.jpg" class="media-object" style="width:60px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media Bottom</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <!-- Media top -->
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="~/images/img_avartar4.jpg" class="media-object" style="width:60px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media Top</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+
+                <!-- Media middle -->
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <img src="~/images/img_avartar5.jpg" class="media-object" style="width:60px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media Middle</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <img src="~/images/img_avartar6.jpg" class="media-object" style="width:60px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media Middle</h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="about_title"> CONTANCT US</h3>
+    <div class="well well-lg" style="background-color:tan">
+        <div id="contact" class="container-fluid bg-grey">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p class="normal_text">Contact us and we'll get back to you within 24 hours.</p>
+                    <p class="normal_text"><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+                    <p class="normal_text"><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+                    <p class="normal_text"><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+                </div>
+                <div class="col-sm-7 slideanim">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="about_title"> OUR POSITION</h3>
+    <div class="well well-lg" style="background-color:tan">
+       <img src="~/images/location.png" alt="location"  class="img-thumbnail" />
+    </div>
+</div>
